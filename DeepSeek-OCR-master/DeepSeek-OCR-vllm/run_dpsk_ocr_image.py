@@ -153,9 +153,9 @@ async def stream_generate(image=None, prompt=''):
         block_size=256,
         max_model_len=8192,
         enforce_eager=False,
-        trust_remote_code=True,  
+        trust_remote_code=True,
         tensor_parallel_size=1,
-        gpu_memory_utilization=0.75,
+        gpu_memory_utilization=0.5,
     )
     engine = AsyncLLMEngine.from_engine_args(engine_args)
     

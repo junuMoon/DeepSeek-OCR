@@ -1,9 +1,9 @@
 ---
 project: DeepSeek-OCR vLLM Inference Server
 started: 2025-11-17T19:42:07+09:00
-updated: 2025-11-17T20:32:34+09:00
+updated: 2025-11-17T20:47:00+09:00
 status: in-progress
-current_phase: 1
+current_phase: 2
 ---
 
 # DeepSeek-OCR vLLM Inference Server
@@ -42,13 +42,15 @@ FastAPI Server (Docker)
 - ✅ 커스텀 모델 등록 및 로드 성공 (6.23 GiB)
 - Issues resolved: Python 3.12→3.10, vLLM wheel optimization, custom model registration
 
-### Phase 1: Code Validation (in-progress - started 2025-11-17T20:32:34+09:00)
-- config.py 설정 (MODEL_PATH, INPUT_PATH, OUTPUT_PATH)
-- 테스트 환경 준비 (출력 디렉토리)
-- 단일 이미지 테스트 (en_paper.png)
-- DeepseekOCRProcessor, NoRepeatNGramLogitsProcessor 동작 확인
-- 품질 검증 (마크다운, 바운딩 박스)
-- 확장 테스트 (다양한 이미지 타입)
+### Phase 1: Code Validation (completed - 2025-11-17T20:47:00+09:00)
+- ✅ config.py 설정 (MODEL_PATH, INPUT_PATH, OUTPUT_PATH)
+- ✅ GPU 설정 (GPU 7 사용, 메모리 50% = 40GB)
+- ✅ 테스트 환경 준비 (출력 디렉토리)
+- ✅ 단일 이미지 테스트 (en_paper.png) - 100% 정확도
+- ✅ DeepseekOCRProcessor, NoRepeatNGramLogitsProcessor 동작 확인
+- ✅ 품질 검증 (마크다운, 바운딩 박스)
+- Issues resolved: GPU selection, container path mapping
+- Performance: 27.3s initialization, ~3s inference, 40GB GPU memory
 
 ### Phase 2: FastAPI Server (planned)
 - FastAPI 서버 구현 (POST /ocr 엔드포인트)

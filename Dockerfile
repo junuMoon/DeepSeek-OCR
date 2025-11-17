@@ -44,8 +44,14 @@ RUN pip install flash-attn==2.7.3 --no-build-isolation
 # Copy DeepSeek-OCR code
 COPY DeepSeek-OCR-master /app/DeepSeek-OCR-master
 
+# Copy FastAPI application
+COPY api /app/api
+
 # Set working directory
 WORKDIR /app
+
+# Add DeepSeek-OCR-vllm to Python path for imports
+ENV PYTHONPATH=/app:/app/DeepSeek-OCR-master/DeepSeek-OCR-vllm:$PYTHONPATH
 
 # Default command
 CMD ["/bin/bash"]

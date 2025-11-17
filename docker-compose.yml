@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  deepseek-ocr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: deepseek-ocr:latest
+    container_name: deepseek-ocr
+    runtime: nvidia
+    environment:
+      - CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
+      - MODEL_PATH=${MODEL_PATH}
+      - VLLM_USE_V1=0
+      - TRITON_PTXAS_PATH=/usr/local/cuda-11.8/bin/ptxas
+    volumes:
+      # Mount model directory (read-only)
+      - /nfs/train/llm-lab/models:/models:ro
+      # Mount DeepSeek-OCR code
+      - ./DeepSeek-OCR-master:/app/DeepSeek-OCR-master
+      # Mount current directory for development
+      - .:/workspace
+    ports:
+      - "${PORT:-8000}:8000"
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: /bin/bash

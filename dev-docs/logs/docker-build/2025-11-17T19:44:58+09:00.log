@@ -1,0 +1,217 @@
+---
+command: docker compose build
+timestamp: 2025-11-17T19:44:58+09:00
+phase: 0
+status: running
+---
+
+time="2025-11-17T19:45:05+09:00" level=warning msg="/home/fran/DeepSeek-OCR/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+#0 building with "default" instance using docker driver
+
+#1 [deepseek-ocr internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.58kB done
+#1 DONE 0.0s
+
+#2 [deepseek-ocr internal] load metadata for docker.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
+#2 DONE 1.5s
+
+#3 [deepseek-ocr internal] load .dockerignore
+#3 transferring context: 161B done
+#3 DONE 0.0s
+
+#4 [deepseek-ocr  1/12] FROM docker.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04@sha256:8f9dd0d09d3ad3900357a1cf7f887888b5b74056636cd6ef03c160c3cd4b1d95
+#4 resolve docker.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04@sha256:8f9dd0d09d3ad3900357a1cf7f887888b5b74056636cd6ef03c160c3cd4b1d95 done
+#4 sha256:8f9dd0d09d3ad3900357a1cf7f887888b5b74056636cd6ef03c160c3cd4b1d95 743B / 743B done
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 0B / 56.23MB 0.1s
+#4 sha256:5e3b7ee7738140e8f4608c3945b6e1ed4f9fb75db53a04e19ba0a6661e7cc4fe 0B / 4.62MB 0.1s
+#4 sha256:4cda774ad2ecef28c9a1cd97594f7199071c83769f91c5d109eb1cb6770ecdff 0B / 188B 0.1s
+#4 sha256:bd746eb3b9953805ebe644847a227e218b5da775f47007c69930569a75c9ad7d 2.84kB / 2.84kB done
+#4 sha256:d0117ee15b5fd0bbcb42c8fd3e35f9bc0f06fe3a947a4ec240f9b73738c7cf54 17.79kB / 17.79kB done
+#4 sha256:5e3b7ee7738140e8f4608c3945b6e1ed4f9fb75db53a04e19ba0a6661e7cc4fe 4.62MB / 4.62MB 0.3s
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 4.19MB / 56.23MB 0.5s
+#4 extracting sha256:5e3b7ee7738140e8f4608c3945b6e1ed4f9fb75db53a04e19ba0a6661e7cc4fe
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 9.44MB / 56.23MB 0.6s
+#4 sha256:5e3b7ee7738140e8f4608c3945b6e1ed4f9fb75db53a04e19ba0a6661e7cc4fe 4.62MB / 4.62MB 0.5s done
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 16.78MB / 56.23MB 0.8s
+#4 sha256:4cda774ad2ecef28c9a1cd97594f7199071c83769f91c5d109eb1cb6770ecdff 188B / 188B 0.8s
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 28.31MB / 56.23MB 0.9s
+#4 sha256:775f22adee620daec0db645bad7027db4c1ecf22520412e1b2466fc73d54d19b 0B / 6.88kB 0.9s
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 31.46MB / 56.23MB 1.0s
+#4 extracting sha256:5e3b7ee7738140e8f4608c3945b6e1ed4f9fb75db53a04e19ba0a6661e7cc4fe 0.4s done
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 36.70MB / 56.23MB 1.1s
+#4 sha256:4cda774ad2ecef28c9a1cd97594f7199071c83769f91c5d109eb1cb6770ecdff 188B / 188B 1.0s done
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 0B / 1.38GB 1.1s
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 47.19MB / 56.23MB 1.3s
+#4 sha256:775f22adee620daec0db645bad7027db4c1ecf22520412e1b2466fc73d54d19b 6.88kB / 6.88kB 1.3s
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 51.38MB / 56.23MB 1.4s
+#4 ...
+
+#5 [deepseek-ocr internal] load build context
+#5 transferring context: 213.79MB 1.2s done
+#5 DONE 1.5s
+
+#4 [deepseek-ocr  1/12] FROM docker.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04@sha256:8f9dd0d09d3ad3900357a1cf7f887888b5b74056636cd6ef03c160c3cd4b1d95
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 56.18MB / 56.23MB 1.5s
+#4 sha256:775f22adee620daec0db645bad7027db4c1ecf22520412e1b2466fc73d54d19b 6.88kB / 6.88kB 1.4s done
+#4 sha256:16c36d0187d03bd0de84d870ded86c45fabd78f4bfdb2ed90177e5fc4dd33d11 0B / 63.70kB 1.5s
+#4 sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 56.23MB / 56.23MB 1.5s done
+#4 extracting sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 0.1s
+#4 sha256:e7a56570655c990ecc804c77873efc83f9a6c31064e3e8a5dc02430213f2d74c 0B / 1.69kB 1.6s
+#4 sha256:16c36d0187d03bd0de84d870ded86c45fabd78f4bfdb2ed90177e5fc4dd33d11 63.70kB / 63.70kB 1.8s done
+#4 sha256:e7a56570655c990ecc804c77873efc83f9a6c31064e3e8a5dc02430213f2d74c 1.69kB / 1.69kB 1.9s done
+#4 sha256:507fc9045cbad45c1c4ca554a6453fe0a1c9ae74667db0612fec7475256d5c23 0B / 1.52kB 1.9s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 0B / 2.46GB 1.9s
+#4 sha256:507fc9045cbad45c1c4ca554a6453fe0a1c9ae74667db0612fec7475256d5c23 1.52kB / 1.52kB 2.2s
+#4 extracting sha256:5bd037f007fdda13ae5a5f43a199d6677db1f9059c2980c84726e3a43fab169a 0.8s done
+#4 extracting sha256:4cda774ad2ecef28c9a1cd97594f7199071c83769f91c5d109eb1cb6770ecdff
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 73.40MB / 1.38GB 2.6s
+#4 sha256:507fc9045cbad45c1c4ca554a6453fe0a1c9ae74667db0612fec7475256d5c23 1.52kB / 1.52kB 2.4s done
+#4 extracting sha256:4cda774ad2ecef28c9a1cd97594f7199071c83769f91c5d109eb1cb6770ecdff done
+#4 extracting sha256:775f22adee620daec0db645bad7027db4c1ecf22520412e1b2466fc73d54d19b done
+#4 sha256:922ac8fcb88926d95550e82f83c14a4f3f3eaab635e7acf43ee0c59dea0c14d7 0B / 88.23kB 2.6s
+#4 sha256:922ac8fcb88926d95550e82f83c14a4f3f3eaab635e7acf43ee0c59dea0c14d7 88.23kB / 88.23kB 2.7s
+#4 sha256:922ac8fcb88926d95550e82f83c14a4f3f3eaab635e7acf43ee0c59dea0c14d7 88.23kB / 88.23kB 2.7s done
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 0B / 1.43GB 2.9s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 146.80MB / 1.38GB 4.3s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 73.40MB / 1.43GB 5.2s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 126.88MB / 2.46GB 5.6s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 220.20MB / 1.38GB 6.2s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 148.90MB / 1.43GB 7.1s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 293.60MB / 1.38GB 8.0s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 260.05MB / 2.46GB 8.8s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 221.31MB / 1.43GB 9.5s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 363.86MB / 1.38GB 10.2s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 389.02MB / 2.46GB 11.4s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 294.65MB / 1.43GB 11.7s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 441.45MB / 1.38GB 12.5s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 369.10MB / 1.43GB 13.7s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 527.43MB / 1.38GB 15.6s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 528.48MB / 2.46GB 15.6s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 444.48MB / 1.43GB 15.8s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 518.00MB / 1.43GB 18.1s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 597.69MB / 1.38GB 18.2s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 596.39MB / 1.43GB 19.3s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 653.26MB / 2.46GB 19.5s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 680.53MB / 1.38GB 20.5s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 689.96MB / 1.43GB 21.8s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 752.88MB / 1.38GB 22.7s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 765.46MB / 1.43GB 24.0s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 765.46MB / 2.46GB 24.6s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 824.18MB / 1.38GB 27.1s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 837.81MB / 1.43GB 28.6s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 896.53MB / 1.38GB 29.2s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 866.12MB / 2.46GB 29.6s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 966.79MB / 1.38GB 31.8s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 912.26MB / 1.43GB 32.0s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 987.76MB / 1.43GB 34.5s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 955.25MB / 2.46GB 34.7s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 1.04GB / 1.38GB 35.0s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.06GB / 1.43GB 37.6s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 1.11GB / 1.38GB 38.2s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.08GB / 2.46GB 39.8s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.14GB / 1.43GB 40.2s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 1.18GB / 1.38GB 41.2s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.21GB / 1.43GB 42.5s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.28GB / 1.43GB 44.6s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.18GB / 2.46GB 44.8s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 1.25GB / 1.38GB 45.2s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 1.32GB / 1.38GB 49.6s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.35GB / 1.43GB 49.7s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.27GB / 2.46GB 49.9s
+#4 sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 1.38GB / 1.38GB 54.0s done
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.43GB / 1.43GB 54.3s
+#4 sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 1.43GB / 1.43GB 54.7s done
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.36GB / 2.46GB 55.0s
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 5.1s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.48GB / 2.46GB 59.6s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.61GB / 2.46GB 64.0s
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 11.0s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.71GB / 2.46GB 69.0s
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 16.1s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.82GB / 2.46GB 74.1s
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 21.5s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 1.90GB / 2.46GB 79.2s
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 26.6s
+#4 extracting sha256:263fc748118f7937f811e3e9c9355318db07dd2dd1dccc370dadaa7d0b5ed692 27.4s done
+#4 extracting sha256:16c36d0187d03bd0de84d870ded86c45fabd78f4bfdb2ed90177e5fc4dd33d11
+#4 extracting sha256:16c36d0187d03bd0de84d870ded86c45fabd78f4bfdb2ed90177e5fc4dd33d11 done
+#4 extracting sha256:e7a56570655c990ecc804c77873efc83f9a6c31064e3e8a5dc02430213f2d74c done
+#4 extracting sha256:507fc9045cbad45c1c4ca554a6453fe0a1c9ae74667db0612fec7475256d5c23 done
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.00GB / 2.46GB 84.3s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.08GB / 2.46GB 89.4s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.17GB / 2.46GB 94.4s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.30GB / 2.46GB 98.6s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.37GB / 2.46GB 103.7s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.43GB / 2.46GB 108.8s
+#4 sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 2.46GB / 2.46GB 112.8s done
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 5.0s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 10.1s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 15.2s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 20.3s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 25.4s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 31.2s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 36.3s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 41.4s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 47.0s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 52.7s
+#4 extracting sha256:23b7d8e07c16707ff4ec3ca558a8099c454953c840156c318a60a6b4273846a0 55.4s done
+#4 extracting sha256:922ac8fcb88926d95550e82f83c14a4f3f3eaab635e7acf43ee0c59dea0c14d7
+#4 extracting sha256:922ac8fcb88926d95550e82f83c14a4f3f3eaab635e7acf43ee0c59dea0c14d7 done
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 0.1s
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 5.1s
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 10.1s
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 15.8s
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 20.9s
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 25.9s
+#4 extracting sha256:68075f2beca1cfd3f243ec110000716dff39d895f4d5e0d3faba7ace430f9633 30.6s done
+#4 DONE 202.6s
+
+#6 [deepseek-ocr  2/12] RUN apt-get update && apt-get install -y     python3.12     python3.12-dev     python3-pip     wget     git     curl     build-essential     && rm -rf /var/lib/apt/lists/*
+#6 2.597 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#6 3.800 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#6 3.800 Get:3 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  InRelease [1581 B]
+#6 4.985 Get:4 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  Packages [2143 kB]
+#6 6.791 Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#6 6.814 Get:6 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [60.9 kB]
+#6 8.862 Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3530 kB]
+#6 9.321 Get:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#6 10.04 Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#6 11.99 Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5982 kB]
+#6 13.51 Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1289 kB]
+#6 69.99 Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#6 69.99 Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+#6 73.84 Get:14 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#6 74.97 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [69.2 kB]
+#6 74.97 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [6181 kB]
+#6 83.08 Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3861 kB]
+#6 87.56 Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1595 kB]
+#6 89.59 Get:19 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.2 kB]
+#6 89.59 Get:20 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.9 kB]
+#6 91.32 Fetched 45.2 MB in 1min 31s (499 kB/s)
+#6 91.32 Reading package lists...
+#6 92.99 Reading package lists...
+#6 94.05 Building dependency tree...
+#6 94.30 Reading state information...
+#6 94.40 E: Unable to locate package python3.12
+#6 94.40 E: Couldn't find any package by glob 'python3.12'
+#6 94.40 E: Couldn't find any package by regex 'python3.12'
+#6 94.40 E: Unable to locate package python3.12-dev
+#6 94.40 E: Couldn't find any package by glob 'python3.12-dev'
+#6 94.40 E: Couldn't find any package by regex 'python3.12-dev'
+#6 ERROR: process "/bin/sh -c apt-get update && apt-get install -y     python3.12     python3.12-dev     python3-pip     wget     git     curl     build-essential     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [deepseek-ocr  2/12] RUN apt-get update && apt-get install -y     python3.12     python3.12-dev     python3-pip     wget     git     curl     build-essential     && rm -rf /var/lib/apt/lists/*:
+89.59 Get:20 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [83.9 kB]
+
+
+
+94.40 E: Unable to locate package python3.12
+94.40 E: Couldn't find any package by glob 'python3.12'
+94.40 E: Couldn't find any package by regex 'python3.12'
+94.40 E: Unable to locate package python3.12-dev
+94.40 E: Couldn't find any package by glob 'python3.12-dev'
+94.40 E: Couldn't find any package by regex 'python3.12-dev'
+------
+failed to solve: process "/bin/sh -c apt-get update && apt-get install -y     python3.12     python3.12-dev     python3-pip     wget     git     curl     build-essential     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100

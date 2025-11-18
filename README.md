@@ -48,18 +48,140 @@
 <img src="assets/fig1.png" style="width: 1000px" align=center>
 </p>
 <p align="center">
-<a href="">Explore the boundaries of visual-text compression.</a>       
+<a href="">Explore the boundaries of visual-text compression.</a>
 </p>
 
 ## Release
-- [2025/10/23]🚀🚀🚀 DeepSeek-OCR is now officially supported in upstream [vLLM](https://docs.vllm.ai/projects/recipes/en/latest/DeepSeek/DeepSeek-OCR.html#installing-vllm). Thanks to the [vLLM](https://github.com/vllm-project/vllm) team for their help.
-- [2025/10/20]🚀🚀🚀 We release DeepSeek-OCR, a model to investigate the role of vision encoders from an LLM-centric viewpoint.
+- [2025/10/23] DeepSeek-OCR is now officially supported in upstream [vLLM](https://docs.vllm.ai/projects/recipes/en/latest/DeepSeek/DeepSeek-OCR.html#installing-vllm). Thanks to the [vLLM](https://github.com/vllm-project/vllm) team for their help.
+- [2025/10/20] We release DeepSeek-OCR, a model to investigate the role of vision encoders from an LLM-centric viewpoint.
 
 ## Contents
+- [FastAPI Server (Docker + vLLM)](#fastapi-server-docker--vllm)
 - [Install](#install)
 - [vLLM Inference](#vllm-inference)
 - [Transformers Inference](#transformers-inference)
-  
+
+## FastAPI Server (Docker + vLLM)
+
+This repository includes a production-ready FastAPI server implementation for DeepSeek-OCR inference using vLLM AsyncEngine in a Dockerized environment.
+
+### Features
+
+- REST API with OpenAPI documentation (Swagger UI)
+- Asynchronous inference using vLLM AsyncEngine
+- Docker-based deployment with CUDA 11.8 support
+- File upload via multipart/form-data
+- Document and image OCR with custom prompts
+- Automatic preprocessing with DeepseekOCRProcessor
+- Anti-repetition processing with NoRepeatNGramLogitsProcessor
+- Health check and model info endpoints
+
+### Quick Start
+
+1. Clone the repository:
+```bash
+git clone https://github.com/deepseek-ai/DeepSeek-OCR.git
+cd DeepSeek-OCR
+```
+
+2. Configure environment:
+```bash
+# Edit .env file
+MODEL_PATH=/path/to/DeepSeek-OCR
+PORT=8000
+CUDA_VISIBLE_DEVICES=0
+```
+
+3. Build and run with Docker Compose:
+```bash
+docker-compose up -d
+```
+
+4. Access the API:
+- API docs: http://localhost:8000/docs
+- Health check: http://localhost:8000/health
+- Model info: http://localhost:8000/models
+
+### API Usage
+
+#### OCR Endpoint
+
+```bash
+# Document OCR
+curl -X POST "http://localhost:8000/api/v1/ocr" \
+  -F "file=@document.png" \
+  -F "type=document"
+
+# Image OCR with custom prompt
+curl -X POST "http://localhost:8000/api/v1/ocr" \
+  -F "file=@image.jpg" \
+  -F "type=image" \
+  -F "prompt=Describe this image in detail."
+```
+
+#### Health Check
+
+```bash
+curl http://localhost:8000/health
+```
+
+Response:
+```json
+{
+  "status": "healthy",
+  "model_loaded": true,
+  "gpu_available": true,
+  "timestamp": "2025-11-17T21:00:00+09:00"
+}
+```
+
+### Architecture
+
+```
+Client
+  ↓ (HTTP multipart/form-data)
+FastAPI Server (Docker)
+  ├─ POST /api/v1/ocr (type parameter for document/image)
+  ├─ DeepseekOCRProcessor (image preprocessing)
+  ├─ vLLM AsyncEngine (singleton, loaded at startup)
+  └─ Markdown text response
+```
+
+### Performance
+
+- Server startup: ~27s (one-time AsyncEngine initialization)
+- Inference: ~3-4s per image
+- GPU memory: ~40GB (NVIDIA A100)
+- Throughput: ~15-20 requests/minute
+
+### Project Structure
+
+```
+api/
+├── core/           # Configuration, logging, error handling
+├── models/         # Pydantic request/response models
+├── routers/        # API endpoints (health, ocr)
+└── services/       # Engine manager, preprocessor, postprocessor
+
+DeepSeek-OCR-master/  # Original DeepSeek-OCR code
+docker-compose.yml    # Docker service configuration
+Dockerfile            # Container build configuration
+requirements.txt      # Python dependencies
+```
+
+### Development
+
+For detailed implementation notes, see:
+- dev-docs/PROJECT_PLAN.md - Overall project plan
+- dev-docs/phase0-docker-setup/ - Docker environment setup
+- dev-docs/phase1-code-validation/ - Inference validation
+- dev-docs/phase2-fastapi-server/ - FastAPI implementation
+
+### Requirements
+
+- Docker with NVIDIA Container Toolkit
+- NVIDIA GPU (tested on A100 80GB)
+- Model files: deepseek-ai/DeepSeek-OCR
 
 
 
